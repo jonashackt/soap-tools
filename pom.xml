@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>de.codecentric</groupId>
+	<artifactId>soapi-rawclient</artifactId>
+	<version>0.0.5-SNAPSHOT</version>
+	<name>soapi-rawclient</name>
+	<description>Simple Client for sending raw HTTP-Request with SOAP-Requests in the HTTP-Body</description>
+  
+  	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
+   
+	<developers>
+		<developer>
+			<name>Jonas Hecht</name>
+			<email>jonas.hecht@codecentric.de</email>
+			<organization>codecentric AG</organization>
+		</developer>
+	</developers>
+
+   <properties>
+		<!-- use UTF-8 for everything -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<apache.httpclient>4.3.6</apache.httpclient>
+    </properties>
+   
+   <dependencies>
+        
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>${apache.httpclient}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>fluent-hc</artifactId>
+			<version>${apache.httpclient}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.12</version>
+		</dependency>
+		
+   </dependencies>
+	
+    <build>
+        <defaultGoal>clean install</defaultGoal>
+    </build>
+  
+</project>
