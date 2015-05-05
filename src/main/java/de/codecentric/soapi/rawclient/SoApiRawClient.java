@@ -35,8 +35,10 @@ public class SoApiRawClient {
 			Response httpResponseContainer = Request
 					.Post(soapServiceUrl)
 					.bodyString(xmlFile, contentTypeTextXmlUtf8())
-					.addHeader("SOAPAction", "\"urn:getQuote\"")
+					.addHeader("SOAPAction", "\"urn:getWeather\"")
 					.execute();
+			
+			//TODO Extract SOAPAction from XML
 			
 			HttpResponse httpResponse = httpResponseContainer.returnResponse();			
 			easyRawSoapResponse.setHttpStatusCode(httpResponse.getStatusLine().getStatusCode());
