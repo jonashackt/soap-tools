@@ -1,14 +1,14 @@
-package de.codecentric.soapi.rawclient;
+package de.codecentric.soaptools.rawclient;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
-import de.codecentric.soapi.rawclient.exception.SoApiRawClientException;
-import de.codecentric.soapi.rawclient.util.XmlUtils;
+import de.codecentric.soaptools.XmlUtils;
+import de.codecentric.soaptools.exception.SoapToolsException;
 
 
 
-public class SoApiRawClientResponse {
+public class HttpRawClientResponse {
 
 	private int httpStatusCode;
 	private Document httpResponseBody;
@@ -42,7 +42,7 @@ public class SoApiRawClientResponse {
 		return faultstring.getTextContent();
 	}
 	
-	public <T> T getUnmarshalledObjectFromSoapMessage(Class<T> jaxbClass) throws SoApiRawClientException {
+	public <T> T getUnmarshalledObjectFromSoapMessage(Class<T> jaxbClass) throws SoapToolsException {
 		return XmlUtils.getUnmarshalledObjectFromSoapMessage(httpResponseBody, jaxbClass);
 	}
 }

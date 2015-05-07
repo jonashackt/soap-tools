@@ -1,10 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.codecentric</groupId>
-	<artifactId>soapi-rawclient</artifactId>
-	<version>0.0.5-SNAPSHOT</version>
-	<name>soapi-rawclient</name>
-	<description>Simple Client for sending raw HTTP-Request with SOAP-Requests in the HTTP-Body</description>
+	<artifactId>soap-tools</artifactId>
+	<version>0.0.2-SNAPSHOT</version>
+	<name>soap-tools</name>
+	<description>Simple tools to help working with SOAP-Stuff not covered by the the usual suspects</description>
   
   	<parent>
 		<groupId>org.sonatype.oss</groupId>
@@ -28,7 +28,11 @@
     </properties>
    
    <dependencies>
-        
+        <dependency>
+        	<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>4.1.6.RELEASE</version>
+        </dependency>
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
